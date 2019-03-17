@@ -4,9 +4,10 @@ const items = [
   { title: 'Контакты', href: '#contact' }
 ];
 
+
 const app = (
   <div>
-    <Menu items={items} opened />
+    <Menu items={items} opened = {true} />
     <Menu items={items} />
   </div>
 );

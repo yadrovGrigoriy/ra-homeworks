@@ -1,6 +1,5 @@
 const now = new Date();
 
 ReactDOM.render(
-  <Calendar date={now} />,
-  document.getElementById('root')
+  <Calendar date={now} />,  document.getElementById('root')
 );
