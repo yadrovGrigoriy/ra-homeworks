@@ -6,7 +6,13 @@ function ShopItem(props){
 	const { brand, title, description, descriptionFull, price, currency } = props.item;
 
 		return (
-			<div className="main-content">
+			<div 
+				className="main-content"
+			 	style={{
+					outline: '2px dashed darkred',
+					outlineOffset: '-12px'
+				}}
+			>
 				<h2>{ brand }</h2>
 				<h1>{ title }</h1>
 				<h3>{ description }</h3>
