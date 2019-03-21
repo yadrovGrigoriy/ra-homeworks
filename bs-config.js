@@ -205,7 +205,7 @@ module.exports = {
         extensions: ["html", "js", "css"]
     }
   },
-  "startPath": "/README.md",
+  "startPath": "/",
   "port": 3000,
   "middleware": [
     indexMiddleware('index.html'),

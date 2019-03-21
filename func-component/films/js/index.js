@@ -2,7 +2,7 @@ const films = [{
   id: 'film-01',
   poster: './i/superman.jpg',
   title: 'Супермен',
-  stars: 4,
+  stars: '',
   price: 1299,
   type: 'Экшн',
   color: 'orange',

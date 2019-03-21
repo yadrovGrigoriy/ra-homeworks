@@ -40,7 +40,7 @@ function Chat({chats, messages}) {
         </div>
 
         <div className="chat-history">
-          <MessageHistory list={messages} />
+          <MessageHistory list={messages} /> 
         </div>
 
         <div className="chat-message clearfix">
