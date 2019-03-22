@@ -12,6 +12,7 @@ class App extends React.Component {
     this.setState({isUnauthorized: false, user});
   }
   render() {
+    console.log(this.state.user)
     return (
       <div className="App">
         <Modal isHidden={!this.state.isUnauthorized}>

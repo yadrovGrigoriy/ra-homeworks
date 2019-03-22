@@ -12,15 +12,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
   <script type="text/babel" src="./js/FeedbackForm.js"></script>
+  
   <script type="text/babel">
     const form = {
       salutation: 'Мисис',
       name: 'Алевтина',
       subject: 'У меня важный вопрос',
       message: 'Как оформить доставку?',
-      email: 'mis@test.co',
+      email: 'missis@test.co',
       snacks: ['пирог']
+    };
+    const form2 = {
+      salutation: 'Мис',
+      name: 'Марфа',
+      subject: 'У меня проблема',
+      message: 'где библиотека?',
+      email: 'mis@test.co',
+      snacks: ['пицца','пирог']
     };
 
     function App() {
@@ -29,7 +39,7 @@
         <section className="content">
           <h1 className="content__heading">Отправить нам сообщение</h1>
           <p className="content__lede">Используйте эту простую форму чтобы связаться с нами.</p>
-          <FeedbackForm data={form} onSubmit={data => output.value = data} />
+          <FeedbackForm data={form2} onSubmit={data => output.value = data} />
           <output ref={field => output = field} />
         </section>
       );
