@@ -9,15 +9,6 @@ class App extends React.Component {
      }
   }
 
-
-  getInitialState = () => {
-    this.setState({
-      active: this.props.options[0],
-      open: false
-    })
-  }
-
-
   handleChange = (option) => {
     this.setState({
       active: option
