@@ -2,7 +2,7 @@
 
 const Stars = ({count}) => {
   const stars =[]
-  if(count < 1 || count > 5 || isNaN(count)) count = 0 ;
+  if(count < 1 || count > 5 || isNaN(count)) count = null ;
   for(let i=0; i < count;i++){
     stars[i] = <li key={shortid.generate()} ><Star/></li>;
   }

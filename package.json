@@ -24,7 +24,6 @@
     "markdown-it": "^8.3.1"
   },
   "dependencies": {
-    "short-id": "0.1.0-1",
-    "shortid": "^2.2.14"
+    "short-id": "0.1.0-1"
   }
 }
