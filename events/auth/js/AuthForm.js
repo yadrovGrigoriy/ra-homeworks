@@ -20,6 +20,7 @@ const AuthForm = ({ onAuth }) => {
     }
 
     const handleInput = (event) => {
+     
         if(event.currentTarget.type === 'email'){
             event.currentTarget.value = event.currentTarget.value.replace(/[^\w@.-]/gi, '') 
         }

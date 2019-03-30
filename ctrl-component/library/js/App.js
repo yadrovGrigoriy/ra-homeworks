@@ -28,7 +28,8 @@ class App extends React.Component {
                 <div className="search-books">
                     <div className="search-books-bar">
                         <div className="search-books-input-wrapper">
-                            <SearchBox value={this.state.query}
+                            <SearchBox 
+                                value={this.state.query}
                                 filterBooks={this.filterBooks}/>
                         </div>
                     </div>
