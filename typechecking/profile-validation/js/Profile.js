@@ -13,6 +13,8 @@ const imageStyle = {
   height: '200px'
 };
 
+
+
 const Profile = props => {
   return (
     <div className="col-md-4 text-center" style={{marginBottom: '10px'}}>
@@ -27,3 +29,25 @@ const Profile = props => {
     </div>
   );
 };
+
+Profile.defaultProps = {
+  img:'./images/profile.jpg',
+} 
+Profile.propTypes= {
+  first_name:PropTypes.string,
+  last_name:PropTypes.string,
+  img:PropTypes.string,
+  url: (props, propName, componentName) => {
+      if(!/^(https:\/\/)?(vk\.com)\/(id[0-9]+|[A-Za-z0-9_-]+)/.test(props[propName])){
+          return new Error(`Не верно заполнен ${propName} в компоненте ${componentName}.`)
+      }    
+  },
+  birthday: (props, propName, componentName) => {
+    if(!props[propName])return
+    if (!/\d{4}\-\d{2}\-\d{2}/.test(props[propName]) || Date.parse(props[propName]) > Date.now() ) {
+      return new Error(`Не верно заполнен ${propName} в компоненте ${componentName} дата должна быть в формате YYYY-MM-DD  и меньше сегодняшнего дня.`)
+    }  
+  }
+
+
+}

@@ -9,3 +9,14 @@ const TextInput = props => {
     </div>
   )
 };
+
+
+TextInput.propTypes = {
+    onChange:PropTypes.func,
+
+    label: PropTypes.string,
+    type: PropTypes.string,
+    name:PropTypes.string,
+    value:PropTypes.string,
+    required:PropTypes.bool
+}

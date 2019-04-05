@@ -9,3 +9,16 @@ const DateInput = props => {
     </div>
   )
 };
+
+DateInput.propTypes = {
+  onChange:PropTypes.func,
+  
+  label:PropTypes.string,
+  name:PropTypes.string,
+  value:PropTypes.string,
+  required:PropTypes.bool
+}
+
+DateInput.defaultProps = { 
+  value:`${new Date().getFullYear()}.${new Date().getMonth()}.${new Date().getDate()}`
+}

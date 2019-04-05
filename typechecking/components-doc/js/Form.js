@@ -6,7 +6,7 @@ const Form = (props) => {
       <h1 className="text-center">Регистрация</h1>
       <hr/>
       <form onSubmit={props.handleSubmit}>
-        <TextInput label="Email" type="email" name="email" onChange={props.handleChange} value={props.email}
+        <TextInput label="Email" type={"email"} name="email" onChange={props.handleChange} value={props.email}
                    required={true}/>
         <TextInput label="Имя" type="text" name="first_name" onChange={props.handleChange}
                    value={props.first_name}/>
