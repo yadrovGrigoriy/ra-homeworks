@@ -10,6 +10,7 @@ class Reader extends React.Component {
   }
 
   render() {
+    
     return (
       <ReaderView
         toNextPage={() => this.turnThePage(-1)}
