@@ -43,10 +43,8 @@ function fillCurrentMonth(date){
 			month[month.length-1][i-1] = day
 		}
 	}
-
 	return month
 }
-
 
 const  Calendar = (props) => {
 	const { date } = props;
@@ -57,9 +55,6 @@ const  Calendar = (props) => {
 	const month = allMonth[date.getMonth()];
 	const monthStringLocal = date.toLocaleDateString('ru', {month: 'long'});
 	const year = date.getFullYear();
-
-	
-
 
 	return (
 		<div className="ui-datepicker">
