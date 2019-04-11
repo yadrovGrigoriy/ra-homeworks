@@ -1,7 +1,6 @@
 class ProgressBar extends React.Component {
     constructor(props){
         super(props);
-        
         this.innerCircle = {
           color:'#96d6f4',
           radius:45,
@@ -23,16 +22,15 @@ class ProgressBar extends React.Component {
     }
     
     draw = ({completed, total}) => {
-      const canvas = document.getElementById('progressCanvas')
-      canvas.width = canvas.clientWidth
-      canvas.height = canvas.clientHeight
-      const ctx = canvas.getContext('2d')
+      this.canvas.width = this.canvas.clientWidth
+      this.canvas.height = this.canvas.clientHeight
+      const ctx = this.canvas.getContext('2d')
       //шаблон круга 
       const circleTemplate = (color, raduis, progress = 1) => {
         ctx.beginPath()
         ctx.lineWidth = 7
         ctx.strokeStyle = color
-        ctx.arc(canvas.width/2, canvas.height/2, raduis - ctx.lineWidth, 0, 2 * Math.PI * progress)
+        ctx.arc(this.canvas.width/2, this.canvas.height/2, raduis - ctx.lineWidth, 0, 2 * Math.PI * progress)
         ctx.stroke()
       }
       //
@@ -45,14 +43,12 @@ class ProgressBar extends React.Component {
       ctx.font = '25px Verdana';
   
       ctx.beginPath();
-      ctx.fillText(`${Math.round((completed/total) * 100)}%`, canvas.width/2, canvas.height/2);
+      ctx.fillText(`${Math.round((completed/total) * 100)}%`, this.canvas.width/2, this.canvas.height/2);
     }
-
 
     render() {
       return (
-        <canvas id="progressCanvas" className="progress"   />
-
+        <canvas ref={el => this.canvas = el} id="progressCanvas" className="progress"   />
       )
     }
 }
