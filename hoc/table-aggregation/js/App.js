@@ -1,4 +1,7 @@
 'use strict';
+const SortByMonthTable = Sort(MonthTable, 'byMonth');
+const SortByYearTable = Sort(YearTable, 'byYear');
+const SortBySimpleSortTable = Sort(SortTable, 'simlpeSort');
 
 class App extends React.Component {
     constructor(props) {
@@ -17,9 +20,9 @@ class App extends React.Component {
     render() {
         return (
             <div id="app">
-                <MonthTable list={this.state.list} />
-                <YearTable list={this.state.list} />
-                <SortTable list={this.state.list} />
+                <SortByMonthTable list={this.state.list} />
+                <SortByYearTable list={this.state.list} /> 
+                <SortBySimpleSortTable list={this.state.list} /> 
             </div>
         );
     }

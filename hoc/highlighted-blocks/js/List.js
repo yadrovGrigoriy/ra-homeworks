@@ -1,16 +1,19 @@
 'use strict';
 
+const VideoWithTypeItem = TypeItem(Video);
+const ArticleWithTypeItem = TypeItem(Article);
+
 const List = props => {
     return props.list.map(item => {
         switch (item.type) {
             case 'video':
                 return (
-                    <Video {...item} />
+                    <VideoWithTypeItem {...item} />
                 );
 
             case 'article':
                 return (
-                    <Article {...item} />
+                    <ArticleWithTypeItem {...item} />
                 );
         }
     });
