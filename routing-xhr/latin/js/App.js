@@ -5,7 +5,7 @@ class App extends React.Component {
         <div>
           <Header />
           <Switch>
-            <Route exact path="/">
+            <Route  path="/">
               <Homepage />
             </Route>
             <Route path="/article/:id" component={Story} />
