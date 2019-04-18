@@ -1,3 +1,5 @@
+
+
 class App extends React.Component {
   render() {
     return (
@@ -5,7 +7,7 @@ class App extends React.Component {
         <div>
           <Header />
           <Switch>
-            <Route  path="/">
+            <Route exact path="/">
               <Homepage />
             </Route>
             <Route path="/article/:id" component={Story} />
