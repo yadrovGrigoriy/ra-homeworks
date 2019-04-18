@@ -21,10 +21,9 @@ class Reader extends React.Component {
     );
   }
 
-  turnThePage() {
-    const total = this.state.pages.length;
-
-    this.setState({ currentPage: total })
+  turnThePage(nextPage) {
+    const currentPage = this.state.currentPage + nextPage;
+    this.setState({ currentPage })
   }
 }
 
