@@ -1,3 +1,6 @@
+
+const ButtonForm = window.antd.Button;
+
 const Button = () => (
-  <button>Отправить</button>
+  <ButtonForm type="primary" block size='large' >Отправить</ButtonForm>
 );

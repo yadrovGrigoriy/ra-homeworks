@@ -1,9 +1,21 @@
+
+const { Form } = window.antd
+
+const labelStyle={display:'block', fontSize:'25px'}
+
 const MortgateCalculator = () => (
-  <div>
-    <form action="">
-      <Autocomplete/>
-      <Inputs/>
-      <Button/>
-    </form>
-  </div>
+    <Form style={{ 
+              margin:'10px auto',
+              width: '40%'
+            }}>
+      <Autocomplete labelStyle={labelStyle}/>
+      <Inputs labelStyle={labelStyle}/>
+      <Button />
+    </Form > 
 );
+
+
+
+
+
+  
